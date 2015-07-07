@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+	<body ng-app="starter">
+
+		<ion-pane>
+			<ion-side-menus>
+				<ion-side-menu-content>
+				
+					<ion-nav-bar class="bar-energized">
+						<!_-<ion-nav-back-button>
+						</ion-nav-back-button>-->
+						<ion-nav-buttons side="right">
+							<button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+							</button>
+						</ion-nav-buttons>
+					</ion-nav-bar>
+					<ion-nav-view>
+						
+						<form>
+							<div class = "list list-inset">
+								<p></p>
+								<p class ="title">Enter your information</p>
+								<label class = "item item-inset">
+									<input type = "text" placeholder = "First Name" ng-model = "fname"></input>
+								</label>
+								<label class = "item item-inset">
+									<input type = "text" placeholder = "Last Name" ng-model = "lname"></input>
+								</label>	
+								<label class = "item item-inset">
+									<input type = "tel" placeholder = "Mobile Number" ng-model = "mnumber"></input>
+								</label>	
+								<label class = "item item-inset">
+									<input type = "email" placeholder = "Email" ng-model = "email"></input>
+								</label>	
+								<label class = "item item-inset">
+									<input type = "text" placeholder = "Fax Number" ng-model = "fnumber"></input>
+								</label>	
+								<label class = "item item-inset">
+									<input type = "text" placeholder = "Company Url" ng-model = "curl"></input>
+								</label>
+								<button class = "button button-energized button-full">Next</button>
+
+							</div>
+						</form>
+					</ion-nav-view>
+				</ion-side-menu-content>
+
+				<ion-side-menu side="right">
+					<ion-header-bar class="bar-royal">
+						<h1 class="title">Narendra</h1>
+					</ion-header-bar>
+					<ion-content>
+						<ion-list>
+							<ion-item menu-close ng-click="profile">
+								Profile
+							</ion-item>
+							<ion-item menu-close href="#/app/mymessages">
+								My Messages
+							</ion-item>
+							<ion-item menu-close href="#/app/sendmessage">
+								Send Message
+							</ion-item>
+							<!--<ion-item menu-close href="#/app/playlists">
+								Playlists
+							</ion-item>-->
+						</ion-list>
+					</ion-content>
+				</ion-side-menu>
+			</ion-side-menus>
+		</ion-pane>
+	</body>
+</html>
